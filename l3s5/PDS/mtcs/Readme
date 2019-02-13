@@ -1,0 +1,5 @@
+ LIN Renjie && YANG Lu
+
+Pour ce TP, on a réalisé tous les questions, pour tester SIGUSR1, il faut trouver le processus avec ps -e et le tuer par kill -10 pid.
+
+Merci!

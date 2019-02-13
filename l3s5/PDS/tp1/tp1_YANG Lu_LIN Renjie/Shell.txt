@@ -1,0 +1,8 @@
+EX1.
+
+La valeur de NAME_MAX est 255
+La valeur de PATH_MAX est 4096
+
+EX2.
+
+

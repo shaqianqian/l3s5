@@ -1,0 +1,43 @@
+EX1.
+
+La valeur de NAME_MAX est 255
+La valeur de PATH_MAX est 4096
+
+EX2.
+
+
+2.1
+lin@a10p11:~/Documents/tp1_YANG Lu_LIN Renjie$ ./maccess -v -x a
+Le droit d'accès demandé au ficher n'est pas positionné!
+
+2.2
+lin@a10p11:~/Documents/tp1_YANG Lu_LIN Renjie$ ./maccess -v qsd
+Le ficher n'exist pas!
+
+2.3
+lin@a10p11:~/Documents/tp1_YANG Lu_LIN Renjie$ ./maccess -v a/
+Une des composantes du nom de ficher n'est pas un répertoire!
+
+2.4
+lin@a10p11:~/Documents/tp1_YANG Lu_LIN Renjie$ ./maccess -v fqsddddddddddddddfsdqsddddddqsdfsdsdsdsddsssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+sssssssssssssssssssssssssssssss/qsfd
+Une des composantes du nom du fichier est trop longue!
+
+
+2.5
+lin@a10p11:~/Documents/tp1_YANG Lu_LIN Renjie$ ./maccess -v fqsddddddddddddddfsdqsddddddqsdfsdsdsdsddsssssssssssssssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssss
+Le nom du ficher est trop long!
+
+
+2.6
+lin@a10p11:~/Documents/tp1_YANG Lu_LIN Renjie$ ln -s bar
+lin@a10p11:~/Documents/tp1_YANG Lu_LIN Renjie$ ./maccess -v bar 
+Le nom du fichier comporte trop de liens symboliques!
+

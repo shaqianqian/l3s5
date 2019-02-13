@@ -1,0 +1,50 @@
+digraph Automaton { 
+  rankdir = LR
+{rank=same;   0 [label="root"];}
+{rank=same;   1 [label="a"];  2 [label="h"];  3 [label="n"];  4 [label="r"];  5 [label="i"];}
+{rank=same;   6 [label="an"];  7 [label="ho"];  8 [label="ni",peripheries=2];  9 [label="re"];  10 [label="ir"];}
+{rank=same;   11 [label="ann"];  12 [label="hon"];  13 [label="nin"];  14 [label="ren"];  15 [label="ire"];  16 [label="rei"];}
+{rank=same;   17 [label="anni"];  18 [label="honn"];  19 [label="nina",peripheries=2];  20 [label="rene",peripheries=2];  21 [label="iren"];  22 [label="rein",peripheries=2];}
+{rank=same;   23 [label="annie",peripheries=2];  24 [label="honni"];  25 [label="irene",peripheries=2];}
+{rank=same;   26 [label="honnit",peripheries=2];}
+  start0 [style=invis]
+  start0 -> 0[color="black:white:black"]
+  5 -> 10 [label = "r" ]
+  0 -> 3 [label = "n" ]
+  12 -> 18 [label = "n" ]
+  21 -> 25 [label = "e" ]
+  0 -> 4 [label = "r" ]
+  15 -> 21 [label = "n" ]
+  2 -> 7 [label = "o" ]
+  8 -> 13 [label = "n" ]
+  0 -> 1 [label = "a" ]
+  14 -> 20 [label = "e" ]
+  18 -> 24 [label = "i" ]
+  0 -> 2 [label = "h" ]
+  6 -> 11 [label = "n" ]
+  16 -> 22 [label = "n" ]
+  4 -> 9 [label = "e" ]
+  3 -> 8 [label = "i" ]
+  24 -> 26 [label = "t" ]
+  17 -> 23 [label = "e" ]
+  9 -> 14 [label = "n" ]
+  10 -> 15 [label = "e" ]
+  13 -> 19 [label = "a" ]
+  1 -> 6 [label = "n" ]
+  7 -> 12 [label = "n" ]
+  9 -> 16 [label = "i" ]
+  11 -> 17 [label = "i" ]
+    6 -> 3 [style=dotted]
+    8 -> 5 [style=dotted]
+    10 -> 4 [style=dotted]
+    12 -> 3 [style=dotted]
+    14 -> 3 [style=dotted]
+    15 -> 9 [style=dotted]
+    16 -> 5 [style=dotted]
+    17 -> 5 [style=dotted]
+    19 -> 1 [style=dotted]
+    21 -> 14 [style=dotted]
+    24 -> 5 [style=dotted]
+    25 -> 20 [style=dotted]
+}
+

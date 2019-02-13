@@ -1,0 +1,138 @@
+TP7              MA LING
+30/11/2016   
+Q1.F et G sont equivalant ou pas?
+consult('1.pl').
+Yes,ils sont equivalent.
+?-schema(R), fds1(F1), fds2(F2), equiv(R,F1,F2).
+R = [a, c, d, e, h],
+F1 = [[[a], [c]], [[a, c], [d]], [[e], [a, d]], [[e], [h]]],
+F2 = [[[a], [c, d]], [[e], [a, h]]] .
+
+Q2.calculer ssn+ et dunumber+.
+consult('2.pl').
+?- schema(G),fds(F),xplus(G,F,[ssn,dnumber],Xplus).
+Xplus = [address, bdate, dmgrssn, dname, dnumber, ename, ssn].
+
+Q3.Is the set of functional dependencies G in Exercise 2 minimal? If not, find a minimal set of
+functional dependencies that is equivalent to G.
+consult('2.pl').
+?- schema(G),fds(F),mincover(G,F,MinF).
+F = [[[ssn], [ename, bdate, address, dnumber]], [[dnumber], [dname, dmgrssn]]],
+MinF = [[[dnumber], [dmgrssn, dname]], [[ssn], [address, bdate, dnumber, ename]]]
+
+F=MinF,donc F est minimal.
+
+Q4.What is the key for R? Decompose R into 3NF relations.
+consult('4.pl').
+?- schema(R), fds(F), candkey(R,F,K).
+K = [a, b] 
+
+?- schema(R), fds(F), threenf(R,F,R3NF).
+R3NF= [[a, d, e], [a, b, c], [b, f], [d, i, j], [f, g, h]] 
+
+5.consult('5.pl'). 
+Repeat Exercise 4 for G = {AB → C, BD → EF, B → F, F → GH, D → IJ}.
+?- schema(R), fds(F), threenf(R,F,R3NF).
+R3NF= [[a, b, c], [b, f], [b, d, e], [d, i, j], [f, g, h], [a, b, d]] 
+
+6.consult('6.pl'). 
+Is AB a candidate key of this relation? If not, is ABD?
+?- schema(R), fds(F), candkey(R,F,[a,b]).
+false.
+?- schema(R), fds(F), candkey(R,F,K).
+K = [a, d, e] .donc ABD est candidate key.
+
+7.consult('7.pl'). 
+Find the candidate keys for R and decompose the relation into 3NF relations.
+candKey = [semester, year, dayshours, roomno] 
+R3NF = [[courseno, courselevel, credithours, offeringdept], [courseno, secno, semester, year, dayshours, noofstudents, roomno], [roomno, dayshours, semester, year, courseno, instructorssn]] 
+
+8. consult('7.pl').
+It is a lossless join decomposition?
+yes,
+?- schema(R), fds(F), decomp(R1,R2,R3,R4),ljd(R,F,D).
+....
+R1 = [propertyis, area, lotno],
+R2 = [area, countyname],
+R3 = [area, price],
+R4 = [countyname, taxrate],
+...
+
+9. Determine the candidate keys for R, find a minimal cover for F, and decompose R into 3NF
+relations.
+utiliser('4.pl').
+K=[a,b]
+MinF = [[[a], [d, e]], [[a, b], [c]], [[b], [f]], [[d], [i, j]], [[f], [g, h]]] 
+R3NF = [[a, d, e], [a, b, c], [b, f], [d, i, j], [f, g, h]] 
+
+10. Determine the candidate keys for R, find a minimal cover for F, and decompose R into 3NF
+relations.
+utiliser('5.pl').
+K = [a, b, d]
+MinF = [[[a, b], [c]], [[b], [f]], [[b, d], [e]], [[d], [i, j]], [[f], [g, h]]] 
+R3NF = [[a, b, c], [b, f], [b, d, e], [d, i, j], [f, g, h], [a, b, d]]
+
+11. Decompose R into BCNF relations.
+?- schema(R), fds(F), bcnf(R,F,RBCNF).
+
+consult('4.pl')
+RBCNF = [[a, b, c], [a, d, e, i, j], [a, c, f, g, h], [b, f]] 
+
+consult('5.pl')
+RBCNF = [[a, b, d], [a, b, c, f, g, h], [a, d, i, j], [b, d, e]] 
+
+12. Determine the candidate keys for R and decompose R into 3NF relations and into BCNF
+relations.
+
+consult('6.pl').
+K = [a, d, e] 
+R3NF = [[a, b, c], [c, d, e], [d, e, b], [a, d, e]] 
+RBCNF = [[a, d, e], [a, b, c], [d, e, b]] 
+
+consult('7.pl').
+K = [semester, year, dayshours, roomno] 
+R3NF = [[courseno, courselevel, credithours, offeringdept], [courseno, secno, semester, year, dayshours, noofstudents, roomno], [roomno, dayshours, semester, year, courseno, instructorssn,secno]]
+RBCNF = [[courseno, secno, instructorssn, semester, year, dayshours, roomno, noofstudents], [courseno, courselevel, credithours, offeringdept]]  
+
+13.consult('4.pl'). 
+Determine whether each of the following decompositions has the (a) dependency
+preservation property, and (b) the lossless join property with respect to F:
+D1([[a,b,c],[a,d,e], [b,f], [f,g,h],[d,i,j]]).
+D2([[a,b,c,d,e],[b,f,g,h],[d,i,j]]).
+D3([[a,b,c,d],[d,e],[b,f], [f,g,h],[d,i,j]]).
+-i 
+a)NO
+b)NO
+-ii
+a)YES
+b)NO
+-iii
+a)YES
+b)YES
+
+14. consult('14.pl')
+iv)Evaluate each of the following as candidate keys: {m}, {m,y}, {m,c}.
+?- schema(R), fds(F), candkey(R,F,[mn]).
+false.
+
+?- schema(R), fds(F), candkey(R,F,[mn,yr]).
+R = [mn, yr, p, mp, c],
+F = [[[mn], [mp]], [[mn, yr], [p]], [[mp], [c]]] .
+
+?- schema(R), fds(F), candkey(R,F,[mn,c]).
+false.
+
+v)Test if REFRIG is in 3NF? In BCNF?
+?- schema(R), fds(F), is3NF(R,F).
+false.
+
+?- schema(R), fds(F), isBCNF(R,F).
+false.
+
+vi)Test if the decomposition D = {R1(m,y,p), R2(m,mp,c)} is lossless.
+YES.
+?- schema(R), fds(F), decomp(R1,R2), ljd(R,F,R1,R2).
+R = [mn, yr, p, mp, c],
+F = [[[mn], [mp]], [[mn, yr], [p]], [[mp], [c]]],
+R1 = [mn, yr, p],
+R2 = [mn, mp, c] 

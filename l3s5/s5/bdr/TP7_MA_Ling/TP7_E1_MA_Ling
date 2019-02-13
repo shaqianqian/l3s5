@@ -1,0 +1,5 @@
+TP7_E1   MA LING
+1.On doit d'abord trouver son candidate key.
+2.Si il se séparer bien et respecte 3nf et BCNF. si il n'y a pas de "-> ->",et il n'y a pas de résultat qui dependent seulement une partie de cantidate key, il sont meillure. Parce que si on a besoin de l'ajouter quelque choose ou supprimer quelques choose, on ne doit pas changer tous la database ou récrire le moin.
+3.Si il respecte 3nf et BCNF, c'est a dit que il y a des fonctions qui peut implique autres a moin de 2 fois ou determiner candidate key. C'est pas bon.
+4.Si il conserve les dependances fonctionelle, il ne respecte pas le 3NF ou BCNF.

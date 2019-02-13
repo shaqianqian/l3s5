@@ -1,0 +1,44 @@
+On a creé No.1 processus, son pid est 8948
+On a creé No.2 processus, son pid est 8949
+On a creé No.3 processus, son pid est 8950
+On a creé No.4 processus, son pid est 8951
+On a creé No.5 processus, son pid est 8952
+On a creé No.6 processus, son pid est 8953
+On a creé No.7 processus, son pid est 8954
+On a creé No.8 processus, son pid est 8955
+On a creé No.9 processus, son pid est 8956
+On a creé No.10 processus, son pid est 8957
+
+Processus[8950] compte 5000000
+Processus[8951] compte 5000000
+Processus[8952] compte 5000000
+Processus[8956] compte 5000000
+Processus[8954] compte 5000000
+Processus[8957] compte 5000000
+Processus[8953] compte 5000000
+Processus[8948] compte 5000000
+Processus[8954] est terminé
+Processus[8949] compte 5000000
+Processus[8955] compte 5000000
+Processus[8950] est terminé
+Processus[8951] est terminé
+Processus[8956] est terminé
+Processus[8952] est terminé
+Processus[8957] est terminé
+Processus[8948] est terminé
+Processus[8953] est terminé
+Processus[8949] est terminé
+Processus[8955] est terminé
+
+L'ordre des processus :
+Processus[8950] arrive, son place est 1
+Processus[8951] arrive, son place est 2
+Processus[8956] arrive, son place est 3
+Processus[8954] arrive, son place est 4
+Processus[8952] arrive, son place est 5
+Processus[8957] arrive, son place est 6
+Processus[8953] arrive, son place est 7
+Processus[8948] arrive, son place est 8
+Processus[8949] arrive, son place est 9
+Processus[8955] arrive, son place est 10
+

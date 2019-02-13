@@ -1,0 +1,6 @@
+LIN Renjie && YANG Lu
+
+On a réussi à faire les exercices 1 et 2 avec les fichiers prlimit.c et maccess.c.
+Pour les tester, on a écrit un fichier makefile pour les compiler et on a aussi écrit un fichier test.sh pour tester tous les
+7 erreurs.
+Merci à votre attention et lecture. Nous vous souhaitons une bonne journée!

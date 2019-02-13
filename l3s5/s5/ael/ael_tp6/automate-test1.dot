@@ -1,0 +1,14 @@
+digraph Automaton { 
+  rankdir = LR
+  0 [label="q0",peripheries=2];  1 [label="q1"];  2 [label="q2",peripheries=2];  3 [label="q3"];  4 [label="q4"];  start0 [style=invis]
+  start0 -> 0[color="black:white:black"]
+  start2 [style=invis]
+  start2 -> 2[color="black:white:black"]
+  0 -> 1 [label = "a" ]
+  1 -> 0 [label = "b" ]
+  2 -> 3 [label = "b" ]
+  3 -> 4 [label = "a" ]
+  3 -> 2 [label = "a" ]
+  4 -> 2 [label = "a" ]
+}
+

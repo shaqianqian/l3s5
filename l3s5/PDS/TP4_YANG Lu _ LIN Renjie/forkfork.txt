@@ -1,0 +1,7 @@
+[1202]je suis le pere
+[1202]mon fils est = 1205
+rinninkumatombp:TP4_YANG Lu & LIN Renjie whirligig$ Fonction executee par le processus 1206
+[1206]je suis = 1206
+[1206]le deuxième fils = 1206
+[1206]mon pere est = 1
+terminaison de main()

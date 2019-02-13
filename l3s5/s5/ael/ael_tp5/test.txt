@@ -1,0 +1,12 @@
+baisser //bla bla bla 
+ 
+lever lever baisser
+
+lever baisser 
+pas 1 
+up 
+pas 100
+nord 
+ouest 
+sud
+est

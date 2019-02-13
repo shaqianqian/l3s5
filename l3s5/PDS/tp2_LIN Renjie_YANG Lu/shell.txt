@@ -1,0 +1,8 @@
+whirligig@ubuntu:~/Desktop/Parallels Shared Folders/Home/Documents/workspace/pds/tp2$ lsfdsfds  Makefile  mdu.c  readme.txt  shell.txt
+whirligig@ubuntu:~/Desktop/Parallels Shared Folders/Home/Documents/workspace/pds/tp2$ makegcc -c -o mdu.o mdu.c -Wall -Werror -ansi -pedantic -D_XOPEN_SOURCE=500 -ggcc -o mdu mdu.o whirligig@ubuntu:~/Desktop/Parallels Shared Folders/Home/Documents/workspace/pds/tp2$ 
+./mdu /bin/lsla taille totale est:104whirligig@ubuntu:~/Desktop/Parallels Shared Folders/Home/Documents/workspace/pds/tp2$ 
+du /bin/ls104	/bin/lswhirligig@ubuntu:~/Desktop/Parallels Shared Folders/Home/Documents/workspace/pds/tp2$
+ ./mdu -b /bin/lsVous avez demandé d'afficher les tailles apparentes!la taille totale est:104508whirligig@ubuntu:~/Desktop/Parallels Shared Folders/Home/Documents/workspace/pds/tp2$ 
+du -b /bin/ls104508	/bin/lswhirligig@ubuntu:~/Desktop/Parallels Shared Folders/Home/Documents/workspace/pds/tp2$ 
+du -L /bin/ls104	/bin/lswhirligig@ubuntu:~/Desktop/Parallels Shared Folders/Home/Documents/workspace/pds/tp2$ 
+./mdu -L /bin/lsVous avez demandé de suivre des links!la taille totale est:104

@@ -1,0 +1,11 @@
+TP2 Gr4 
+Shichen ZHAO et Tianjun Lin	
+
+
+readme:
+  Nous avons fini les exercices 12,13,14,15 sur la support de tp. Les fonctions valid_name et du_file sont dans le fichier mdu.c et nous avons aussi fait le makefile et le test.sh pour vous bien tester.
+
+  Nous avons ajouté deux options '-L' et '-b' avec les deux variables globales qui peuvent mémoriser l'état de ces options. Pour réaliser exercice 14
+nous avons utilié une fonction findChiffre pour éviter de calculer un même fichier( au niveau du noeud ) plusieur fois.
+
+  Merci à votre attention et lecture. Nous vous souhaitons une bonne journée! 
